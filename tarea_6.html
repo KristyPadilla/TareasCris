@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+		<script type="text/javascript" src=""></script>
+			<style type="text/css" media="screen">
+				#rojo
+				{
+					width: 200px;
+					height: 200px;
+					background: red;
+					display: none;
+					float: left;
+					margin: 10px;
+					
+				}
+				#azul
+				{
+					width: 200px;
+					height: 200px;
+					background: blue;
+					display: none;
+					float: left;
+					margin: 10px;
+				}
+				#verde
+				{
+					width: 200px;
+					height: 200px;
+					background: green;
+					float: left;
+					margin: 10px;
+					display: none;
+				}
+				#negro
+				{
+					width: 200px;
+					height: 200px;
+					background: black;
+					display: none;
+					float: left;
+					margin: 10px;
+				}
+				#naranja
+				{
+					width: 200px;
+					height: 200px;
+					background: orange;
+					float: left;
+					margin: 10px;
+				}
+				.clear{
+				clear:both;
+			}
+			</style>
+			
+		<script type="text/javascript" charset="utf-8">
+		
+				function aparece(){
+				
+				$("#rojo").fadeIn(2000, function(){
+					$("#azul").fadeIn(2000);//anidamos otra funcion dentro de otra.
+				});//se puede poner ("slow") y aparecerá lento y tambien le podemos poner el tiempo que queramos
+			};
+			
+			
+				function desaparece(){
+				$("#rojo").fadeOut(2000, function(){
+					$("#azul").fadeOut(2000);
+				});
+			};
+			
+			
+			function toogle(){
+				$("#verde").fadeToggle(2000);
+			};
+			
+			
+			function slide(){
+				$("#negro").slideDown(2000);//hace una animación hacia abajo pero puede ser slideDown, slideToogle, slideUp.
+			};
+			
+			
+						
+		</script>
+	</head>
+	
+<body>
+	<input type="button" onclick="aparece();" value="Aparece"/>
+	<input type="button" onclick="desaparece();" value="Desaparece"/>
+	<input type="button" onclick="toogle();" value="Toogle"/>
+	<input type="button" onclick="slide();" value="Slide"/>
+	<div class="clear"></div>
+	<p id="parrafo"></p>
+<div id="rojo"></div>
+<div id="azul"></div>
+<div id="verde"></div>
+<div id="negro"></div>
+<div id="naranja"></div>
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+				//$("#parrafo").text("dhewdhasd");//pone el texto en <p>
+				
+					//$("#naranja").mouseenter(function(){
+						//$("#naranja").css("background-color", "#F4F4F4");//mouseover es mientras este el cursor en el recuadro hace la función
+					//});
+					
+					//$("#naranja").mouseleave(function(){
+						//$("#naranja").css("background-color", "blue");//mouseleave tocas el div cambia de color y regresa al color original.
+					//});
+				
+					$("#naranja").click(function(){
+							$(this).animate({
+								opacity:0.5,
+								width:"100px",
+							},100)				
+					});
+					
+					
+					$("#naranja").mouseenter(function(){
+						$("#naranja").animate({
+								backgroundColor:"#BF00FF",
+							},1000)
+					});
+					
+					
+					
+					$("#naranja").mouseleave(function(){
+						$("#naranja").animate({
+								backgroundColor:"#FF00BF",
+								width: "200px",
+							},1000)
+					});
+				
+			});
+
+</script>
+
+</body>
+</html>
