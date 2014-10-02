@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Bien</title>
+  <meta http-equiv="Content-Type" content="text/html; charset= utf-8">
+  	<style type="text/css" media="screen">
+  
+  		
+  	  	#suma, #resta, #division
+  		{
+  			width:33%;
+  			height: 400px;
+  			float:left;
+  			min-height: 400px;
+  		}
+  		
+  		#suma
+  		{
+	  		background-color: #5dd6ff;
+  		}
+  		
+  		#resta
+  		{
+	  		background-color: #ca0cff;
+  		}
+  		#division
+  		{
+	  		background-color: #cbff2f;
+  		}
+  		
+  		#suma, #resta, #division, h2
+  		{
+	  		font-family: Arial, "Ms Trebuchet", sans-serif;
+	  		color: black;
+	  		text-align: center;
+  		}
+  		.clear
+  		{
+	  		clear:both;
+  		}
+  		
+	  	.campos
+	  	{
+	  	width:50px;
+	  	height:50px;
+	  	text-align: center;
+	  	font-size: 20px;
+	  	}
+		.operadores
+		{
+		font-size: 30px;
+		margin: 0 10px;
+		}
+	
+		.botones
+	  	{
+		  	width: 100px;
+		  	height: 50px;
+		  	margin: 30px 0 0 0;
+		  	font-size: 20px;
+		  	line-height: 40px;
+		  	border: 0px;
+		  	color:white;
+	  	}
+	  	
+	  	.resultado
+	  	{
+		  	border: 1px solid red;
+		  	height: 50px;
+		  	width: 150px;
+		  	margin: 30px auto 0 auto ;
+		  	line-height: 50px;
+		  	font-size: 30px;
+		  	font-family: Arial, "MS Trebuchet", sans-serif;
+		 }
+	</style>
+	
+	
+	<script type="text/javascript">
+	
+			function fsuma(){
+			
+				document.getElementById("rsuma").innerHTML= parseFloat(document.getElementById("s1").value) +//.value le indica que es un valor numerico a parseInt. 				
+parseFloat(document.getElementById("s2").value)
+		    };
+		     function fresta(){
+			     document.getElementById("rresta").innerHTML= 				parseFloat(document.getElementById("r1").value) - //.value le indica que es un valor numerico a parseInt. 				
+parseFloat(document.getElementById("r2").value)
+		    };
+		     function fdivide(){
+		 var rdiv= parseFloat(document.getElementById("d1").value) /  				
+parseFloat(document.getElementById("d2").value);
+document.getElementById("rdivision").innerHTML= Math.round(rdiv*100)/100; //rdiv nos ayuda a darnos solo dos decimales en el resultado con la propiedad Math.round
+}
+    
+  </script>
+  
+  </head>
+  <body>
+	  <div id="suma">
+	  	<h2>Suma</h2>
+		   	<input type="text" name="s1" id="s1" class="campos"></input>
+		   	<span class="operadores">+</span>
+		   	<input type="text" name="s2" id="s2" class="campos"></input>
+		  	<br/>
+		  	<input type="button" id="sumar" class="botones" value="Sumar" onClick="fsuma();"></input>
+		  	<div id="rsuma" class="resultado"></div>
+	  </div>
+	  
+	  
+	  <div id="resta">
+		  <h2>Resta</h2>
+		  <input type="text" name="r1" id="r1" class="campos"></input>
+		  <span class="operadores">-</span>
+		  <input type="text" name="r2" id="r2" class="campos"></input>
+		  	<br/>
+		  	<input type="button" id="restar" class="botones" value="Restar" onClick="fresta();"></input>
+	  	<div id="rresta" class="resultado"></div>
+	  	</div>
+	  	
+	  	
+	  <div id="division">
+		  <h2>División</h2>
+		  <input type="text" name="d1" id="d1" class="campos"></input>
+		  <span class="operadores">/</span>
+		  <input type="text" name="d2" id="d2" class="campos"></input>
+		  <br/>
+		  <input type="button" id="dividir" class="botones" value="Dividir" onClick="fdivide();"></input>
+	  	<div id="rdivision" class="resultado"></div>
+	  <div class="clear"></div>
+	</div>
+
+  </body>
+  </html>

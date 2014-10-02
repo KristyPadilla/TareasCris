@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tarea 2 Cambio de color</title>
+		<script type="text/javascript" charset="utf-8">
+			var colores=["#068892", "#eeac1f", "#ee1fe2", "#ee1f2d"];
+			//alert(Math.floor(Math.random()* 3));  //math.random te da un numero aleatorio del 0 al 1. al multiplicarlo por 11, ya nos da un numero entre 0 y 10.
+			//Math.floor me deja los puros numeros enteros.
+			//aleatorio = Math.floor(Math.random()* 3);
+			aleatorio = Math.floor(Math.random()* colores.length); //multiplicamos por colores "colores.length por si quiero agregar mas colores y no estar cambiando el numero por el que se multiplica"
+			
+		</script>
+	</head>
+	<body>
+		<script type="text/javascript" charset="utf-8">
+			document.body.style.backgroundColor= colores[aleatorio];
+				
+		</script>
+	</body>
+</html>

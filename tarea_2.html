@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script type="text/javascript" charset="utf-8">
+function cargarImagen(){ // los parentesis () es para esperar datos de la funcion. ej (valor1, valor2)
+ahora=new Date(); // genera una clase de controlador, se incluye para proporcionar una mejor forma de introducir la fecha. 
+
+
+hora=ahora.getHours();
+
+if(hora<13){
+imagen="amanecer.jpg";
+}
+
+if(hora>14){
+imagen="atardecer.jpg";
+}
+document.images["reloj"].src=imagen;
+}
+</script>
+</head>
+
+<body onload="cargarImagen()">
+<img src="amanecer.jpg" name="reloj">
+
+
+</body>
+</html> 
