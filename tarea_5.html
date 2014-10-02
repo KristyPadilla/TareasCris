@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Funciones</title>
+		<style type="text/css" media="screen">
+			#textoPais{
+				font-size: 100px;
+				text-align: center;
+				color:#2383f8;
+			}
+		</style>
+		<script type="text/javascript" charset="utf-8">
+			function suma(v1, v2){
+			//function suma()
+				//alert(5*8);
+				alert(v1*v2);
+			};
+			
+			
+			var colores=["#068892", "#eeac1f", "#ee1fe2", "#ee1f2d"];
+			
+			function cambiaFondo(){
+				aleatorio = Math.floor(Math.random()* colores.length);
+				document.body.style.backgroundColor= colores[aleatorio];
+
+			};
+			
+			function escribirPais(){
+				document.getElementById("textoPais").innerHTML= document.getElementById("pais").value;
+				innerHTMl = "Escribele adentro"
+			};
+</script>
+	</head>
+	
+<body>
+	<!--<input id="cambiafondo" type="button" value="Cambiar fondo" onclick="cambiaFondo();"/>-->
+	<!--<input type="text" name="suma1" id="suma1"/>-->
+	<!--<input type="text" name="suma2" id="suma1">-->
+	
+	<input id="botonpais" type="button" value="Sale" onclick="escribirPais()"/>
+	<input type="text" id="pais">
+		<div id="textoPais"></div>
+		
+	<script type="text/javascript" charset="utf-8"> //Crea un boton para cambiar el fondo cada que le demos click a la pagina. Value es el texto del boton, Onclick pones la funcion para que la realiza cuando se de de click en ese boton
+	
+	//suma(); Se manda a llamar la función y se multiplica 5*8
+	//suma(6, 5); //mandamos a llamar la funcion suma para que se ejecute, multiplicará v1 y v2
+	//cambiaFondo();
+	//setInterval("cambiaFondo()",2000); cambia color cada 2 segundos
+	
+	document.getElementById("pais").value="Escribe un pais";
+	</script>
+</body>
+</html>
