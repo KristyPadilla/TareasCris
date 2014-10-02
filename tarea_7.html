@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lados</title>
+		<meta charset="utf-8"/>
+			<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+			<style type="text/css" media="screen">
+				#a{
+					height: 100%;
+					width: 50%;
+					background: purple;
+					position:absolute;
+					left:0;
+					float:left;
+				}
+				
+				#b{
+					height: 100%;
+					width: 50%;
+					background: #c0fd7a;
+					position:absolute;
+					left:0;
+					float:left;
+					left: 50%;
+				}
+			</style>
+	</head>
+	<body>
+	<div id="a">
+		<button id="derecha">&larr;</button>
+	</div>
+	<div id="b">
+		<button id="izquierda">&rarr;</button>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+	
+		$("#derecha").click(function(){
+		
+			if($("#a").hasClass("clase1")){
+				$("#a").animate({ //
+					width:"50%",
+					left:"0%",
+			});
+			$("#a").removeClass("clase1");//agregamos una clase para poder hacer las dos funciones con un solo botón.
+				$("#b").animate({
+					left:"50%",
+				});
+				
+			}else{
+					$("#a").animate({
+					width:"25%",
+					left:"75%",
+				});
+				
+			$("#a").addClass("clase1");
+				$("#b").animate({
+					left:"100%",
+				});
+				}
+			
+		});
+		//botonderecha bloque B
+		
+		$("#izquierda").click(function(){
+		
+			if($("#b").hasClass("clase2")){
+				$("#b").animate({ //
+					width:"50%",
+					left:"50%",
+			});
+			$("#b").removeClass("clase2");//agregamos una clase para poder hacer las dos funciones con un solo botón.
+				$("#a").animate({
+					left:"0%",
+				});
+				
+			}else{
+					$("#b").animate({
+					width:"25%",
+					left:"0%",
+				});
+				
+			$("#b").addClass("clase2");
+				$("#a").animate({
+					left:"-50%",
+				});
+				}
+			
+		});
+
+	</script>
+		
+	</body>
+</html>
