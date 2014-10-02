@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Repaso</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		
+		<style type="text/css" media="screen">
+			.cuadro
+			{
+				width: 50px;
+				height: 50px;
+				float: left;
+				margin-top: 10px;
+				margin-right: 10px;
+			}
+			
+			.cuadro:hover{
+			width:140px;
+			height:140px;
+		}
+		</style>
+</head>
+
+	<body>
+	<!Primero creamos los elementos de html, 
+	Un input text para crear una caja de texto
+	un boton para hacer nuestra función
+	un div id que es lo que aparecerá en nuestra función
+	>
+		<h1>Escribe un numero</h1>
+		<input type="text" id="numero"></input>
+		<button id="crear" Onclick="myfunction()">Crear</button>
+		
+		<div id="demo"></div>
+		
+		<script type="text/javascript"charset="utf-8">
+		 //1.- Declaramos nuestro arreglo de colores
+			var colores = ["#FF0000","#CCFF33","#0066FF","#9900FF","F0A5FF","EAFFA5","3AAAFF"];
+		//2.- Declaramos nuestra función
+			function myfunction(){
+		//3.- Declaramos nuestra variable i
+				var i;
+		//4  getElementById, obtiene el identificador "id" de los elementos del DOM, cabe recalcar que este id debe ser único para cada elemento. Definimos una variable llamada "numerousuario" que será igual al campo de texto con el id "numero".
+		numerousuario = document.getElementById("numero").value;
+		//5.- nuestra variable i será = 0; mientras 0 sea menor igual a numero de usuario que será el numero del campo de texto sigue incrementando.
+					for(i = 0; i <= numerousuario; i++){
+					//6.- append añade un contenido nuevo a un elemento sin eleminar el que ya está. añadirá una clase llamada cuadro donde le daremos un fondo los colores definidos en el arreglo.
+						jQuery('#demo').append('<div class = "cuadro" style = "background:' + colores[i]+'"></div>')
+					};
+			};
+			
+			
+		//$(document).ready(function(){
+				//$(".cuadro").mouseleave(function(){
+					//$(".cuadro").animate({
+								//backgroundColor:"#BF00FF",
+								//width:"200px",
+							//},1000)
+					//});
+
+			//});
+				
+		
+			$(document).ready(function(){
+				$('.cuadro').click(function(){
+					$('.cuadro').fadeout('slow')
+				});
+			});
+			
+
+		</script>
+		
+	</body>
+</html>
