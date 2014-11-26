@@ -1,0 +1,86 @@
+body
+{
+	font-family: 'Lato', sans-serif;
+}
+
+
+header{
+	border: 1px solid red;
+}
+
+.clear{
+	clear: both;
+}
+
+
+
+h1
+{
+	text-align: center;
+}
+
+
+ nav{
+            height: auto; /*Junto a overflow: hidden; aplicará a nuestro elemento nav el mismo alto que el más alto de sus elementos hijos */ 
+            margin: 0 auto; /* Centro el contenedor */
+            
+            text-align: left;
+            width: 960px; /* Defino el ancho de mi página */
+        }
+       #menu_principal ul{
+            float: left;
+            list-style-type: none; /* Elimino los estilos de lista */
+            padding: 0; 
+            position: relative; 
+            left: 50%;
+        }
+       #menu_principal li{
+        	
+            float: left; /* Floto los li para que se dispongan horizontalmente */
+             position: relative; 
+            right: 50%;
+            border: 1px solid #8004d8;
+            padding: 5;
+            background-color: #93079f;
+   		     }
+   		     
+   	  #menu_principal li:hover{
+	   	  background: #b7b7b7;
+	   	  }
+
+       #menu_principal li a{
+        	
+       		 text-decoration: none;
+       		 color: white;
+            padding: 10px; /* El padding añadirá separación entre los elementos */
+        }
+        
+        .pelicula{
+	        width:200px;
+	        height: 400px;
+	        float:left;
+	        margin: 10px;
+        }
+        .pelicula:hover{
+	       background: #bcb1bc;
+        }
+        .pelicula img{
+	        width:200px;
+	        max-height: 300px;
+	        min-height: 300px;
+        }
+        
+        .datopelicula
+        {
+        	text-align: left;
+	        height: 25px;
+	        width: 100%;
+	        line-height: 25px;
+        }
+        .nombrepelicula{
+	        height:35px;
+	        line-height: 35px;
+	        font-size: 20px;
+	        font-weight: bold;
+	        border-bottom: 1px dashed red;
+        }
